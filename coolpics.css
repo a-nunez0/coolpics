@@ -1,99 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+
 :root {
---primary-color: #52489c;
---secondary-color: #59c3c3;
---accent-color: #f45b69;
---text-dark: #333;
---text-light: #ebebeb;
---primary-font: Arial, Helvetica,sans-serif;
---secondary-font: Mooli, san-serif;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--primary-color);
-    overflow: hidden;
-    color: var(--text-light);
-    float: none;
-    text-align: center;
-    font-size: 18px;
-}
-
-.navbar ul{
-    padding: 0 20px;
-    color: var(--text-light);
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    align-items: center;
-}
-
-.navbar li{
-    display: inline-block;
-    color: var(--text-light);
-}
-
-.navbar ul,
-.navbar li {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: var(--text-light);
-    display: block;
-    padding: 25px 20px;
-    text-align: center;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    max-width: 100%;
-    margin: 1rem auto;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: Mooli, san-serif;
 }
 
 body {
-    font-family: var(--primary-font);
-    font-size: 1.2em;
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  margin: 0;
 }
 
-a:link, a:visited {
-    color: var(--accent-color);
+header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
 }
 
-h2{
-    text-align: center;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
 }
 
-footer{
-    background-color: var(--primary-color);
-    padding: 0;
-    margin: 0;
+.navbar {
+  background-color: var(--primary-color);
 }
 
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar li {
+  width: 100%;
+  text-align: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-light);
+  display: block;
+  padding: 0.75rem 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 100%;
+  margin: 1rem auto;
+}
+
+img {
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+/* Responsive Layouts */
 @media screen and (min-width: 700px) {
-    .gallery {
-      grid-template-columns: 1fr 1fr;
-    }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar li {
+    width: auto;
+  }
+
+  .navbar a {
+    padding: 1rem;
+  }
 }
 
 @media screen and (min-width: 1000px) {
-    .gallery {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
