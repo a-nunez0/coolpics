@@ -63,7 +63,7 @@ header h1 {
 }
 
 img {
-  max-width: 90%;
+  max-width: 100%;
   display: block;
   margin: 0 auto;
   object-fit: cover;
@@ -104,5 +104,8 @@ footer {
 @media screen and (min-width: 1000px) {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .menu-toggle {
+    display: none;
   }
 }
