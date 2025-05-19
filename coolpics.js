@@ -27,7 +27,6 @@ gallery.addEventListener('click', function (event) {
     const thumbSrc = clickedImage.getAttribute('src');
     const altText = clickedImage.getAttribute('alt');
 
-    // Use the same image URL for the modal
     const fullSrc = thumbSrc;
 
     modalImage.setAttribute('src', fullSrc);
