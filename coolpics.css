@@ -148,7 +148,7 @@ footer {
   }
 }
 
-dialog.img-model {
+dialog {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -157,15 +157,15 @@ dialog.img-model {
   z-index: 10;
 }
 
-dialog.img-model {
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+dialog img {
   display: block;
   width: 90%;
   max-height: 100%;
   margin: 20vh auto;
-}
-
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.6);
 }
 
 .close-viewer {
@@ -175,4 +175,6 @@ dialog::backdrop {
   background: var(--accent-color);
   color: white;
   border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
